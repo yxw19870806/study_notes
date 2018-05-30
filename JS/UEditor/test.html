@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../JQuery/jquery-3.3.1.min.js"></script>
+    <!-- 配置文件 -->
+    <script src="code/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script src="code/ueditor.all.js"></script>
+</head>
+<body>
+<script id="container" type="text/plain"></script>
+<script type="text/javascript">
+    $(function () {
+        var ue = UE.getEditor('container', {
+            // http://fex.baidu.com/ueditor/#start-config
+            toolbars: [[
+                'fullscreen', 'source', '|', 'undo', 'redo', '|',
+                'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+                'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+                'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+                'directionalityltr', 'directionalityrtl', 'indent', '|',
+                'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+                'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+                'simpleupload', 'insertimage', 'emotion', 'scrawl', 'insertvideo', 'music', 'attachment', 'map', 'gmap', 'insertframe', 'insertcode', 'webapp', 'pagebreak', 'template', 'background', '|',
+                'horizontal', 'date', 'time', 'spechars', 'snapscreen', 'wordimage', '|',
+                'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+                'print', 'preview', 'searchreplace', 'drafts', 'help'
+            ]], // 工具栏上的所有的功能按钮和下拉框，default value in ueditor.config.js
+//            autoClearinitialContent: false, // 是否自动清除编辑器初始内容, default false
+            focus: true, // 是否让编辑器初始化时获得焦点, default false
+            wordCount: true, // 是否开启字数统计, default true
+//            initialFrameWidth: 1000, // 初始化编辑器宽度
+            initialFrameHeight: 500, // 初始化编辑器高度
+            minFrameWidth: 800, // 编辑器拖动时最小宽度
+            minFrameHeight: 220, // 编辑器拖动时最小高度
+            maximumWords : 10000, // 允许的最大字符数
+            autoHeightEnabled: false, // 是否自动拉伸高度, default true
+            scaleEnabled: false, // 是否手动拉伸拖动编辑器, default true
+            readonly: false // 编辑区域是否是只读, default false
+        });
+    });
+</script>
+</body>
+</html>
